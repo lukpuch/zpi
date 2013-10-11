@@ -11,8 +11,8 @@ using System.Windows.Threading;
 using Microsoft.Kinect;
 using Microsoft.Kinect.Toolkit;
 using Microsoft.Kinect.Toolkit.Controls;
-using Microsoft.Samples.Kinect.InteractionGallery.Navigation;
-using Microsoft.Samples.Kinect.InteractionGallery.Utilities;
+using Przewodnik.ViewModels;
+using Przewodnik.Utilities;
 
 namespace Przewodnik.Controllers
 {

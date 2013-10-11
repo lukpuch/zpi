@@ -4,6 +4,10 @@ using System.Windows;
 using Przewodnik.Utilities;
 using Przewodnik.Controllers;
 using System.Windows.Input;
+using System.Windows.Media;
+
+using Microsoft.Kinect;
+using Microsoft.Kinect.Toolkit;
 
 namespace Przewodnik
 {
@@ -35,6 +39,15 @@ namespace Przewodnik
             }
 
             this.kinectController = kinectController;
+
+            kinectController.EngagedUserColor = (Color)this.Resources["EngagedUserColor"];
+            kinectController.TrackedUserColor = (Color)this.Resources["TrackedUserColor"];
+            kinectController.EngagedUserMessageBrush = (Brush)this.Resources["EngagedUserMessageBrush"];
+            kinectController.TrackedUserMessageBrush = (Brush)this.Resources["TrackedUserMessageBrush"];
+
+            this.kinectRegion.HandPointersUpdated += (sender, args) => kinectController.OnHandPointersUpdated(this.kinectRegion.HandPointers);
+
+            this.DataContext = kinectController;
 
             this.mouseMovementDetector = new MouseMovementDetector(this);
             this.mouseMovementDetector.IsMovingChanged += this.OnIsMouseMovingChanged;
