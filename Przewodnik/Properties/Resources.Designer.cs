@@ -61,6 +61,24 @@ namespace Przewodnik.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Podnieś rękę, aby rozpocząć.
+        /// </summary>
+        internal static string EngagementHandoffGetStarted {
+            get {
+                return ResourceManager.GetString("EngagementHandoffGetStarted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Podnieś rękę, aby przejąć kontrolę.
+        /// </summary>
+        internal static string EngagementHandoffKeepControl {
+            get {
+                return ResourceManager.GetString("EngagementHandoffKeepControl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kinect Controller is invalid.
         /// </summary>
         internal static string KinectControllerInvalid {

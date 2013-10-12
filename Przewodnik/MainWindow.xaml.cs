@@ -2,7 +2,7 @@
 using System.Windows;
 
 using Przewodnik.Utilities;
-using Przewodnik.Controllers;
+using Przewodnik.ViewModels;
 using System.Windows.Input;
 using System.Windows.Media;
 

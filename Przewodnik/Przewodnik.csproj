@@ -49,6 +49,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Kinect, Version=1.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft SDKs\Kinect\v1.8\Assemblies\Microsoft.Kinect.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data" />
@@ -69,10 +73,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Navigation\DefaultNavigableContexts.cs" />
+    <Compile Include="Navigation\IExportNavigableMetadata.cs" />
+    <Compile Include="Navigation\INavigableContext.cs" />
+    <Compile Include="Navigation\NavigationManager.cs" />
+    <Compile Include="Utilities\EngagementStateManager.cs" />
+    <Compile Include="Utilities\EventQueueSection.cs" />
     <Compile Include="Utilities\MouseMovementDetector.cs" />
     <Compile Include="Utilities\PromptState.cs" />
+    <Compile Include="Utilities\UserActivityMeter.cs" />
+    <Compile Include="Utilities\UserActivityRecord.cs" />
     <Compile Include="Utilities\WindowBezelHelper.cs" />
-    <Compile Include="Controllers\KinectController.cs" />
+    <Compile Include="ViewModels\KinectController.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -141,10 +153,7 @@
       <Name>Microsoft.Kinect.Toolkit</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controls\" />
-    <Folder Include="Navigation\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

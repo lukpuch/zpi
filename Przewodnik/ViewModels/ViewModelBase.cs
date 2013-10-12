@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Przewodnik.Navigation;
+using System;
 using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.Diagnostics;

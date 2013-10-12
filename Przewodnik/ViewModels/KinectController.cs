@@ -13,8 +13,10 @@ using Microsoft.Kinect.Toolkit;
 using Microsoft.Kinect.Toolkit.Controls;
 using Przewodnik.ViewModels;
 using Przewodnik.Utilities;
+using Przewodnik.Navigation;
+using Microsoft.Samples.Kinect.InteractionGallery.Navigation;
 
-namespace Przewodnik.Controllers
+namespace Przewodnik.ViewModels
 {
     /// <summary>
     /// Manages the lifetime of the Kinect sensor and calculates the current controlling user.
